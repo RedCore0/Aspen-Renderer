@@ -1023,12 +1023,6 @@ static inline void DrawImage(Image img, Vec2 pos, Vec2 scale,
     DrawImageEx(img, pos, scale, srcPos, srcSize, (Vec2){1, 1}, layer, rot, pivot, RENDER_WORLD_SPACE, sm);
 }
 
-static inline void DrawImageUI(Image img, Vec2 pos, Vec2 scale,
-                               Vec2 srcPos, Vec2 srcSize,
-                               float rot, Vec2 pivot, int layer, RenderScaleMode sm) {
-    DrawImageEx(img, pos, scale, srcPos, srcSize, (Vec2){1, 1}, layer, rot, pivot, RENDER_SCREEN_SPACE, sm);
-}
-
 static inline void DrawBackground(Image img) {
     float w = (float) GetWindowWidth(), h = (float) GetWindowHeight();
     DrawImageEx(img,
